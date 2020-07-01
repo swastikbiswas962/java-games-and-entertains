@@ -42,7 +42,7 @@ public class TicTacToe_multiplayer {
 			if (mv1 <= 0 || mv1 >= 10)
 			{
 				System.out.println("Invalid move. Start over.");
-				System.exit(0);
+				System.exit(0);System.exit(0);
 			}
 			
 			if (mv1 == 1)
@@ -159,7 +159,7 @@ public class TicTacToe_multiplayer {
 				else
 				{
 					System.out.println("Error... Plz restart.");
-          System.exit(0);
+          System.exit(0);}} //For some Github errors...
 				
 			
 			
