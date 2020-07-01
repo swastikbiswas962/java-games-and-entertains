@@ -159,9 +159,9 @@ public class TicTacToe_multiplayer {
 				else
 				{
 					System.out.println("Error... Plz restart.");
-          System.exit(0);}} //For some Github errors...
-				
-			
+          System.exit(0);
+				}
+			}
 			
 			System.out.println("");
 			System.out.println(" "+a+" | "+b+" | "+c+" ");
