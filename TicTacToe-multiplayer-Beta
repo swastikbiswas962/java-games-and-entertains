@@ -1,0 +1,420 @@
+import java.util.Scanner;
+
+public class TicTacToe_multiplayer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		
+		//Major data types
+		char a = '1'; boolean aIsFull = false;
+		char b = '2'; boolean bIsFull = false;
+		char c = '3'; boolean cIsFull = false;
+		char d = '4'; boolean dIsFull = false;
+		char e = '5'; boolean eIsFull = false;
+		char f = '6'; boolean fIsFull = false;
+		char g = '7'; boolean gIsFull = false;
+		char h = '8'; boolean hIsFull = false;
+		char i = '9'; boolean iIsFull = false;
+		int x = 0;
+		int attempt = 1;
+		
+		//Intro
+		System.out.println("Welcome to Tic-Tac-Toe Multiplayer!");
+		System.out.println("");
+		System.out.println("Rules: Type in the corresponding no. to place an X or an O respectively.");
+		System.out.println("Also, a single invalid move can terminate the program, so be careful.");
+		System.out.println("");
+		
+		while (attempt <= 9)
+		{
+			//X's turn
+			System.out.println(" "+a+" | "+b+" | "+c+" ");
+			System.out.println("---+---+---");
+			System.out.println(" "+d+" | "+e+" | "+f+" ");
+			System.out.println("---+---+---");
+			System.out.println(" "+g+" | "+h+" | "+i+" ");
+			System.out.println("");
+			System.out.println("Now is X's turn...");
+			int mv1 = sc.nextInt();
+			
+			if (mv1 <= 0 || mv1 >= 10)
+			{
+				System.out.println("Invalid move. Start over.");
+				System.exit(0);
+			}
+			
+			if (mv1 == 1)
+			{
+				if (aIsFull = true) 
+				{
+					a = 'X';
+					aIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+					System.exit(0);
+				}
+			}
+			else if (mv1 == 2)
+			{
+				if (bIsFull = true) 
+				{
+					b = 'X';
+					bIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+          System.exit(0);
+				}
+			}
+			else if (mv1 == 3)
+			{
+				if (cIsFull = true) 
+				{
+					c = 'X';
+					cIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+          System.exit(0);
+				}
+			}
+			else if (mv1 == 4)
+			{
+				if (dIsFull = true) 
+				{
+					d = 'X';
+					dIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+          System.exit(0);
+				}
+			}
+			else if (mv1 == 5)
+			{
+				if (eIsFull = true) 
+				{
+					e = 'X';
+					eIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+          System.exit(0);
+				}
+			}
+		    else if (mv1 == 6)
+			{
+		    	if (fIsFull = true) 
+				{
+					f = 'X';
+					fIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+          System.exit(0);
+				}
+			}
+		    else if (mv1 == 7)
+			{
+		    	if (gIsFull = true) 
+				{
+					g = 'X';
+					gIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+          System.exit(0);
+				}
+			}
+		    else if (mv1 == 8)
+			{
+		    	if (hIsFull = true) 
+				{
+					h = 'X';
+					hIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+          System.exit(0);
+				}
+			}
+			else if (mv1 == 9)
+			{
+				if (iIsFull = true) 
+				{
+					i = 'X';
+					iIsFull = true;
+				}
+				else
+				{
+					System.out.println("Error... Plz restart.");
+          System.exit(0);
+				
+			
+			
+			System.out.println("");
+			System.out.println(" "+a+" | "+b+" | "+c+" ");
+			System.out.println("---+---+---");
+			System.out.println(" "+d+" | "+e+" | "+f+" ");
+			System.out.println("---+---+---");
+			System.out.println(" "+g+" | "+h+" | "+i+" ");
+			System.out.println("");
+			++attempt;
+			
+			//abc, adg, aei, cfi, ghi, ceg, beh, def.
+			
+			if (a == 'X' && b == 'X' && c == 'X')
+			{
+				System.out.println("Congrats, X! You won the game! [Win code: 123]");
+				++x;
+				attempt += 9;
+			}
+			else if (a == 'X' && d == 'X' && g == 'X')
+			{
+				System.out.println("Congrats, X! You won the game! [Win code: 147]");
+				++x;
+				attempt += 9;
+			}
+			else if (a == 'X' && e == 'X' && i == 'X')
+			{
+				System.out.println("Congrats, X! You won the game! [Win code: 159]");
+				++x;
+				attempt += 9;
+			}
+			else if (c == 'X' && f == 'X' && i == 'X')
+			{
+				System.out.println("Congrats, X! You won the game! [Win code: 369]");
+				++x;
+				attempt += 9;
+			}
+			else if (g == 'X' && h == 'X' && i == 'X')
+			{
+				System.out.println("Congrats, X! You won the game! [Win code: 789]");
+				++x;
+				attempt += 9;
+			}
+			else if (c == 'X' && e == 'X' && g == 'X')
+			{
+				System.out.println("Congrats, X! You won the game! [Win code: 357]");
+				++x;
+				attempt += 9;
+			}
+			else if (b == 'X' && e == 'X' && h == 'X')
+			{
+				System.out.println("Congrats, X! You won the game! [Win code: 258]");
+				++x;
+				attempt += 9;
+			}
+			else if (d == 'X' && e == 'X' && f == 'X')
+			{
+				System.out.println("Congrats, X! You won the game! [Win code: 456]");
+				++x;
+				attempt += 9;
+			}
+			
+			if (attempt >= 9)
+			{
+				
+			}
+			else
+			{
+				//O's turn
+				System.out.println("Now is O's turn...");
+				int mv2 = sc.nextInt();
+				
+				if (mv2 <= 0 || mv2 >= 10)
+				{
+					System.out.println("Invalid move. Start over.");
+					System.exit(0);
+				}
+				
+				if (mv2 == 1)
+				{
+					if (aIsFull = true) 
+					{
+						a = 'O';
+						aIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+						System.exit(0);
+					}
+				}
+				else if (mv2 == 2)
+				{
+					if (bIsFull = true) 
+					{
+						b = 'O';
+						bIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+            System.exit(0);
+					}
+				}
+				else if (mv2 == 3)
+				{
+					if (cIsFull = true) 
+					{
+						c = 'O';
+						cIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+            System.exit(0);
+					}
+				}
+				else if (mv2 == 4)
+				{
+					if (dIsFull = true) 
+					{
+						d = 'O';
+						dIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+            System.exit(0);
+					}
+				}
+				else if (mv2 == 5)
+				{
+					if (eIsFull = true) 
+					{
+						e = 'O';
+						eIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+            System.exit(0);
+					}
+				}
+			    else if (mv2 == 6)
+				{
+			    	if (fIsFull = true) 
+					{
+						f = 'O';
+						fIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+            System.exit(0);
+					}
+				}
+			    else if (mv2 == 7)
+				{
+			    	if (gIsFull = true) 
+					{
+						g = 'O';
+						gIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+            System.exit(0);
+					}
+				}
+			    else if (mv2 == 8)
+				{
+			    	if (hIsFull = true) 
+					{
+						h = 'O';
+						hIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+            System.exit(0);
+					}
+				}
+				else if (mv2 == 9)
+				{
+					if (iIsFull = true) 
+					{
+						i = 'O';
+						iIsFull = true;
+					}
+					else
+					{
+						System.out.println("Error... Plz restart.");
+            System.exit(0);
+					}
+				}
+				++attempt;
+				
+				//abc, adg, aei, cfi, ghi, ceg, beh, def.
+				
+				if (a == 'O' && b == 'O' && c == 'O')
+				{
+					System.out.println("Congrats, O! You won the game! [Win code: 123]");
+					++x;
+					attempt += 9;
+				}
+				else if (a == 'O' && d == 'O' && g == 'O')
+				{
+					System.out.println("Congrats, O! You won the game! [Win code: 147]");
+					++x;
+					attempt += 9;
+				}
+				else if (a == 'O' && e == 'O' && i == 'O')
+				{
+					System.out.println("Congrats, O! You won the game! [Win code: 159]");
+					++x;
+					attempt += 9;
+				}
+				else if (c == 'O' && f == 'O' && i == 'O')
+				{
+					System.out.println("Congrats, O! You won the game! [Win code: 369]");
+					++x;
+					attempt += 9;
+				}
+				else if (g == 'O' && h == 'O' && i == 'O')
+				{
+					System.out.println("Congrats, O! You won the game! [Win code: 789]");
+					++x;
+					attempt += 9;
+				}
+				else if (c == 'O' && e == 'O' && g == 'O')
+				{
+					System.out.println("Congrats, O! You won the game! [Win code: 357]");
+					++x;
+					attempt += 9;
+				}
+				else if (b == 'O' && e == 'O' && h == 'O')
+				{
+					System.out.println("Congrats, O! You won the game! [Win code: 258]");
+					++x;
+					attempt += 9;
+				}
+				else if (d == 'O' && e == 'O' && f == 'O')
+				{
+					System.out.println("Congrats, O! You won the game! [Win code: 456]");
+					++x;
+					attempt += 9;
+				}
+			}
+		}
+		
+		if (x == 0)
+		{
+			System.out.println("Well played. But it's a draw...");
+		}
+	}
+
+}
