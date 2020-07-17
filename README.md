@@ -4,3 +4,4 @@ Here, my games are basic, beginner friendly and especially long programs with to
 My games here yet:
 • Rock Paper Scissor game (vs Computer)
 • Tic tac toe game (Multiplayer Offline)
+• Card Game [Avengers Edition] (vs Computer)
