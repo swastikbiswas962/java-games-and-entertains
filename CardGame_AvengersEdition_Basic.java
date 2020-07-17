@@ -115,6 +115,8 @@ public class Avengers_cardGame1 {
 				break;
 				case 4: Thanos();
 				break;
+				case 5: PowerStone();
+				break;
 				default: System.out.println("Error...");
 				System.exit(0);
 				break;
@@ -145,8 +147,6 @@ public class Avengers_cardGame1 {
 				{
 					Thanos();
 				}
-				break;
-				case 5: PowerStone();
 				break;
 				default: System.out.println("Error...");
 				System.exit(0);
