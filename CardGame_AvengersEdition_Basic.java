@@ -4,6 +4,7 @@ public class Avengers_cardGame1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//For ease, kindly delete (String[] args) ...
 
 		Scanner sc = new Scanner (System.in);
 		
