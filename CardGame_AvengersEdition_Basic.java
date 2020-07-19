@@ -14,6 +14,19 @@ public class Avengers_cardGame1 {
 		
 		//Welcome Screen
 		{
+			System.out.println("Swastik Biswas presents...");
+			try
+			{
+				Thread.sleep(5000);
+			}
+			catch (Exception e)
+			{
+				System.out.println("Error occured in starting the program.");
+				System.out.println("Error: " + e);
+				System.out.println("Restart for smoother performance.");
+				System.exit(0);
+			}
+			System.out.println("");
 			System.out.println(" ___     ___     ___   ___    ___   _");
 			System.out.println("/ __|   / _ \\   | _ \\ | _ \\  / __| | |");
 			System.out.println("| |_   / /_\\ \\  | | / ||_| | \\__ \\ \\_/");
@@ -69,13 +82,13 @@ public class Avengers_cardGame1 {
 				//Powers of all cards using arrays
 				int[] powers = 
 					{
-					(int)(randomRange(75, 88)), //Iron Man
-					(int)(randomRange(75, 90)), //Captain America
-					(int)(randomRange(76, 93)), //Thor
-					(int)(randomRange(67, 87)), //Hulk
-					(int)(randomRange(89, 97)), //Thanos
+					(int)(func.randomRange(75, 88)), //Iron Man
+					(int)(func.randomRange(75, 90)), //Captain America
+					(int)(func.randomRange(76, 93)), //Thor
+					(int)(func.randomRange(67, 87)), //Hulk
+					(int)(func.randomRange(89, 97)), //Thanos
 					500, //Power Stone
-					(int)(randomRange(65, 87)) //Black Widow
+					(int)(func.randomRange(65, 87)) //Black Widow
 					};
 				//Here, instead of func, type your class name.
 				
@@ -429,7 +442,7 @@ public class Avengers_cardGame1 {
 	protected static void BlackWidow ()
 	{
 		System.out.println(" ____________");
-		System.out.println("/     ____   |");
+		System.out.println("/    ____   |");
 		System.out.println("|   \\    /   |");
 		System.out.println("|    \\  /    |");
 		System.out.println("|     \\/     |");
@@ -481,12 +494,6 @@ public class Avengers_cardGame1 {
 		System.out.println("|            |");
 		System.out.println("| MIND STONE |");
 		System.out.println("|____________/");
-	}
-	public static int randomRange (int min, int max)
-	{
-		int dif = max - min;
-		int num = (int) (Math.random()*dif) + min;
-		return num;
 	}
 
 }
