@@ -4,9 +4,9 @@ public class Avengers_cardGame1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//For ease, kindly delete (String[] args) ...
 
 		Scanner sc = new Scanner (System.in);
+		cardGame_Functions func = new cardGame_Functions();//Delete this line
 		
 		int attempt = 1;
 		int powerStone_Thanos = 0;
@@ -19,13 +19,18 @@ public class Avengers_cardGame1 {
 			System.out.println("| |_   / /_\\ \\  | | / ||_| | \\__ \\ \\_/");
 			System.out.println("\\___| /_/   \\_\\ |_|_\\ |___/  /___/  o");
 			System.out.println(""); 
-			System.out.println("== Avengers edition (Early Access) ==");
+			System.out.println("== Avengers Edition (Early Access) ==");
 			System.out.println("");
 		}
 		
 		System.out.println("");
-		System.out.println("(1)Play          (2)Exit");
-		System.out.println("    (3) Version info");
+		System.out.println("   ___________");
+		System.out.println("  |           |");
+		System.out.println("  |  (1)PLAY  |");
+		System.out.println("  |___________|");
+		System.out.println("     (2)EXIT    ");
+		System.out.println(" (3)Version Info");
+		System.out.println("  (4)What's New ");
 		System.out.println("");
 		int in = sc.nextInt();
 		
@@ -41,8 +46,9 @@ public class Avengers_cardGame1 {
 			System.out.println("   (4) Hulk");
 			System.out.println("   (5) Thanos");
 			System.out.println("   (6) Power Stone [Power-up]");
+			System.out.println("   (7) Black Widow [NEW!]");
 			System.out.println("#Both you and the computer will give one move.");
-			System.out.println("#The card with more power wins the round.");
+			System.out.println("#The card with more power wins the round. (With a few exceptions)");
 			System.out.println("#Until now, this early access version runs infinte no. of rounds.");
 			System.out.println(" So to quit any time, input zero (0).");
 			System.out.println("So, get playin'!");
@@ -68,14 +74,15 @@ public class Avengers_cardGame1 {
 					(int)(randomRange(76, 93)), //Thor
 					(int)(randomRange(67, 87)), //Hulk
 					(int)(randomRange(89, 97)), //Thanos
-					500 //Power Stone
+					500, //Power Stone
+					(int)(randomRange(65, 87)) //Black Widow
 					};
 				//Here, instead of func, type your class name.
 				
 				int userIn = input - 1;
 				int qw = (int)(Math.random()*2);
 				int as = (int)(Math.random()*5);
-				int compIn = (int)(Math.random()*5);
+				int compIn = (int)(Math.random()*6);
 				
 				if (userIn == compIn)
 				{
@@ -97,7 +104,7 @@ public class Avengers_cardGame1 {
 				
 				switch (userIn)
 				{
-				case 0: int easter1 = (int)(Math.random()*5);
+				case 0: int easter1 = (int)(Math.random()*10);
 				if (easter1 == 4)
 				{
 					IronMan_easter();
@@ -116,6 +123,8 @@ public class Avengers_cardGame1 {
 				case 4: Thanos();
 				break;
 				case 5: PowerStone();
+				break;
+				case 6: BlackWidow();
 				break;
 				default: System.out.println("Error...");
 				System.exit(0);
@@ -148,6 +157,8 @@ public class Avengers_cardGame1 {
 					Thanos();
 				}
 				break;
+				case 5: BlackWidow();
+				break;
 				default: System.out.println("Error...");
 				System.exit(0);
 				break;
@@ -170,6 +181,10 @@ public class Avengers_cardGame1 {
 					{
 						System.out.println("The power stone is already captured by Thanos.");
 					}
+				}
+				else if ((userIn == 1 && compIn == 2) || (userIn == 2 && compIn == 1))
+				{
+					System.out.println("Captain wins! He's worthy of the power of Thor...");
 				}
 				else if (powers[userIn] > powers[compIn])
 				{
@@ -266,7 +281,7 @@ public class Avengers_cardGame1 {
 				System.out.println("");
 				System.out.println("Ask the provider for different versions.");
 				System.out.println("");
-				System.out.println("Early Access [Latest v 0.01.4]");
+				System.out.println("Early Access [Latest v 0.01.6]");
 				System.out.println("Bedrock [Unavailable]");
 				System.out.println("Developer [Latest v 0.02.1]");
 				System.out.println("");
@@ -280,6 +295,22 @@ public class Avengers_cardGame1 {
 			{
 				System.out.println("Re-run the program to go to the home lobby.");
 			}
+		}
+		else if (in == 4)
+		{
+			System.out.println("");
+			System.out.println("What's New in v 0.01.6?");
+			System.out.println("");
+			System.out.println("The play's got BIGGER! Big play button.");
+			System.out.println("");
+			System.out.println("(1) New Card : Black Widow");
+			System.out.println("");
+			System.out.println("(2) New Strategy : Thor Card ");
+			System.out.println("    Anyone worthy of the Mjolnir will beat Thor.");
+			System.out.println("");
+			System.out.println("(3) Iron Man Easter : See if you've already spoted it or not...");
+			System.out.println("");
+			System.out.println("Re-run the program to get back to the home screen.");
 		}
 		
 	}
@@ -367,6 +398,20 @@ public class Avengers_cardGame1 {
 		System.out.println("|   THANOS   |");
 		System.out.println("|____________/");
 	}
+	protected static void Thanos_twoStones ()
+	{
+		System.out.println(" ____________");
+		System.out.println("/      *_*   |");
+		System.out.println("|   _ _|_|*  |");
+		System.out.println("|  |_|_|_|_  |");
+		System.out.println("|  |O|0|0|_| |");
+		System.out.println("|  \\ (O) (O  |");
+		System.out.println("|   \\____/   |");
+		System.out.println("|   ||_|_|   |");
+		System.out.println("|            |");
+		System.out.println("|   THANOS   |");
+		System.out.println("|____________/");
+	}
 	protected static void Thanos_powerStone ()
 	{
 		System.out.println(" ____________");
@@ -379,6 +424,34 @@ public class Avengers_cardGame1 {
 		System.out.println("|   ||_|_|   |");
 		System.out.println("|            |");
 		System.out.println("|   THANOS   |");
+		System.out.println("|____________/");
+	}
+	protected static void BlackWidow ()
+	{
+		System.out.println(" ____________");
+		System.out.println("/     ____   |");
+		System.out.println("|   \\    /   |");
+		System.out.println("|    \\  /    |");
+		System.out.println("|     \\/     |");
+		System.out.println("|     /\\     |");
+		System.out.println("|    /  \\    |");
+		System.out.println("|   /____\\   |");
+		System.out.println("|            |");
+		System.out.println("|BLACK  WIDOW|");
+		System.out.println("|____________/");
+	}
+	protected static void DocStrange ()
+	{
+		System.out.println(" ____________");
+		System.out.println("/            |");
+		System.out.println("|            |");
+		System.out.println("|  \\ \\/ /     |");
+		System.out.println("|   \\/\\/     |");
+		System.out.println("|   /\\()\\    |");
+		System.out.println("|  / /\\  \\   |");
+		System.out.println("|            |");
+		System.out.println("|   DOCTOR   |");
+		System.out.println("|  -STRANGE  |");
 		System.out.println("|____________/");
 	}
 	protected static void PowerStone ()
@@ -395,7 +468,21 @@ public class Avengers_cardGame1 {
 		System.out.println("|POWER  STONE|");
 		System.out.println("|____________/");
 	}
-  public static int randomRange (int min, int max)
+	protected static void MindStone ()
+	{
+		System.out.println(" ____________");
+		System.out.println("/            |");
+		System.out.println("|  Predicts  |");
+		System.out.println("| next  card |");
+		System.out.println("|     __     |");
+		System.out.println("|    |  |    |");
+		System.out.println("|    |__|    |");
+		System.out.println("|            |");
+		System.out.println("|            |");
+		System.out.println("| MIND STONE |");
+		System.out.println("|____________/");
+	}
+	public static int randomRange (int min, int max)
 	{
 		int dif = max - min;
 		int num = (int) (Math.random()*dif) + min;
