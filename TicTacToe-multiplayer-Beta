@@ -172,6 +172,7 @@ public class TicTacToe_multiplayer {
 			System.out.println("");
 			++attempt;
 			
+			//All possible combinations for winning.
 			//abc, adg, aei, cfi, ghi, ceg, beh, def.
 			
 			if (a == 'X' && b == 'X' && c == 'X')
